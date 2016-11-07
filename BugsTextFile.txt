@@ -1,0 +1,47 @@
+Test 9) removeBack() removes an element from the back of a list of size 1, resulting in an empty list: FAILED
+    The vector size of the list after the method call is not 0, which means the element still remains in the list.
+
+
+Test 10) removeBack() returns true after being called on a non-empty list of size 1: FAILED
+    The function should return false in the case that the list is empty, however the list being tested is of size 1. Thus it should return true.
+
+
+Test 11) removeFront() removes an element from the front of a list of size 1, resulting in an empty list: FAILED
+    The vector size of the list after the method call is not 0, which means the element still remains in the list.
+
+
+Test 12) removeFront() returns true after being called on a non-empty list of size 1: FAILED
+    The function should return false in the case that the list is empty, however the list being tested is of size 1. Thus it should return true.
+
+
+Test 14) isEmpty() returns false for a non-empty list: FAILED
+    The function should return true only when the list is empty, however in this case it returned true for a non-empty list.
+
+
+Test 15) addBack(int) adds a new element to the back of a non-empty list: FAILED
+    The addBack method actually adds an element to the front of the list according to vector.Back() and vector.Front()
+
+
+Test 19) removeBack() removes an element from the back of a list of size exceeding 1: FAILED
+    The vector size of the list after the method call doesn't decrease by 1, which means that no element has been removed.
+
+
+Test 20) removeBack() returns true after being called on a non-empty list of size exceeding 1: FAILED
+    The function should return false in the case that the list is empty, however the list being tested exceeds size 1. Thus it should return true.
+
+
+Test 21) removeFront() removes an element from the front of a list of size exceeding 1: FAILED
+    The vector size of the list after the method call doesn't decrease by 1, which means that no element has been removed.
+
+    
+Test 22) removeFront() returns true after being called on a non-empty list of size exceeding 1: FAILED
+    The function should return false in the case that the list is empty, however the list being tested exceeds size 1. Thus it should return true.
+
+
+Test 23) The destructor deletes all nodes in a non-empty list: FAILED
+    Anytime I try to access methods using the deleted list pointer,I get a seg fault. However, printing the pointer to the console before and after the
+    delete command shows no difference of the address in the heap that they point at, which means the pointer was never set to null, allowing there to still be a means of accessing the list vector from 
+    the heap. Also, memory leaks are shown to exist after using valgrind.
+    
+
+All tests completed!
